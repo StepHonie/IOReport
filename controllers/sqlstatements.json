@@ -3,6 +3,10 @@
   {
     "sql":"select customer_id as Value,customer as Label from Customer_V"
   },
+  "getCusfrmEmail":
+  {
+    "sql":"select customer_id as Label from EmailGroup"
+  },
   "getFamily":
   {
     "sql":"select family_id as Value,family as Label from Family_v"

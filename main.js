@@ -4,8 +4,8 @@ var app =  express();
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var email = require('./routes/email');
 var post = require('./routes/post');
+var email = require('./routes/email');
 
 app.set('views','./views');
 app.set('view engine','ejs');

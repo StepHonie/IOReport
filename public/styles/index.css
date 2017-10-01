@@ -6,7 +6,7 @@ html,body,#indexInfo {
 #indexInfo {
   width:86%;
   margin:auto;
-  border:1px #ECF0F5 solid;
+  border:2px #ECF0F5 solid;
 }
 
 #headName {
@@ -36,15 +36,6 @@ span {
   background-color: #ECF0F5;
 }
 
-table td {
-  width:200px;
-  height:15px;
-}
-
-#addEmail tbody td,th{
-  text-align:center;
-  margin:0 auto;
-}
 
 #tbhead td{
   font-weight:bold;

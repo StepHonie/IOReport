@@ -13,6 +13,7 @@ index.index = function(req,res,next)
       res.render('error',{error:err})
     }else{
       res.render('index',{result:result.recordset});
+      console.log(result);
     }
   });
 }

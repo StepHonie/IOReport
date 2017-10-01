@@ -21,7 +21,7 @@
         <span>IO Report</span>
       </div>
       <div id="headBtn" style="margin:5px">
-        <table>
+        <table style="width:100%">
           <tr id="tbhead">
             <td>Customer</td>
             <td>Family</td>
@@ -62,14 +62,14 @@
               <input id="opcount" class="form-control" type="text">
     				</td>
             <td>
-              <button id="btnAdd" class="btn btn-success" style="height:30px;width:80px;margin-left:45px;font-weight:bold">Add</button>
+              <button id="btnAdd" class="btn btn-success" style="height:30px;width:80px;margin-left:10px;font-weight:bold">Add</button>
             </td>
     			</tr>
         </table>
       </div>
     </div>
     <div id="indexBody">
-    <table class="table table-condensed">
+      <table class="table table-condensed">
       <caption></caption>
       <thead>
         <tr>
@@ -85,7 +85,7 @@
       </thead>
       <tbody id="asList">
         <%for(var i=0;i<result.length;i++){
-          var x = result[i] || {Customer_ID:"",Family_ID:"",Area:"",Input_Station:"",Output_Station:"",Input_PanelCount:"",Output_PanelCount:""};
+          var x = result[i] || {id:"",Customer_ID:"",Family_ID:"",Area:"",Input_Station:"",Output_Station:"",Input_PanelCount:"",Output_PanelCount:""};
         %>
         <tr>
           <td><%=x.Customer_ID%></td>
@@ -96,7 +96,7 @@
           <td><%=x.Input_PanelCount%></td>
           <td><%=x.Output_PanelCount%></td>
           <td>
-            <img src="/images/icons/close.png" style="margin:0 auto;display:none">
+            <img class="delAreaList" src="/images/icons/close.png" style="margin:0 auto;display:none">
           </td>
         </tr>
         <%}%>
@@ -104,18 +104,18 @@
     </table>
     </div>
     <div id="indexFooter">
-      <div style="text-align:center;">
-        <ul class="pagination pagination-lg" style="margin:0 auto;">
-          <li><a href="#">&laquo;</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
-      </div>
-    </div>
+  <div style="text-align:center;">
+    <ul class="pagination pagination-lg" style="margin:0 auto;">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+</div>
   </div>
 </body>
 </html>

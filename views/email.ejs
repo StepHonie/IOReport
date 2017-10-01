@@ -1,127 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>IOReport</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%=title%></title>
   <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/index.css">
   <script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="/js/func.js"></script>
+  <script type="text/javascript" src="/js/email.js"></script>
 </head>
 <body>
-  <div class="container">
-	<div class="row clearfix">
-		<div class="col-md-12 column">
-      <div style="padding:5px;height:70px;background-color:#ECF0F5">
-        <table id="addEmail" border="1">
-          <thead>
-            <tr><th style="text-align:left">Email</th><th>Customer</th><th>Family</th><th>EmailGroup</th><th></th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input class="form-control" style="width:250px"></td>
-              <td><input class="form-control"></td>
-              <td><input class="form-control" type="text"></td>
-              <td><input class="form-control" type="text"></td>
-              <td><Button style="width:100px;height:30px;"></td>
-            </tr>
-          </tbody>
+  <div id="indexInfo">
+    <div id="indexHead">
+      <div id="headName">
+        <span>Email Manage</span>
+      </div>
+      <div id="headBtn" style="margin:5px">
+        <table style="width:100%">
+          <tr id="tbhead">
+            <td>Email</td>
+            <td>Customer</td>
+            <td>Family</td>
+            <td>EmailGroup</td>
+          </tr>
+    			<tr>
+    				<td style="width:300px">
+              <input class="form-control" style="width:250px;"></input>
+            </td>
+            <td>
+              <select class="form-control" id="eCus">
+                <option value="">All</option>
+              </select>
+            </td>
+    				<td>
+              <select class="form-control" id="">
+    					  <option value="1">All</option>
+    					</select>
+    				</td>
+    				<td>
+              <input class="form-control" id="">
+    					</input>
+    				</td>
+            <td>
+              <button id="" class="btn btn-success" style="height:30px;width:80px;margin-left:10px;font-weight:bold">Add</button>
+            </td>
+    			</tr>
         </table>
       </div>
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>
-							编号
-						</th>
-						<th>
-							产品
-						</th>
-						<th>
-							交付时间
-						</th>
-						<th>
-							状态
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							1
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							01/04/2012
-						</td>
-						<td>
-							Default
-						</td>
-					</tr>
-					<tr class="success">
-						<td>
-							1
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							01/04/2012
-						</td>
-						<td>
-							Approved
-						</td>
-					</tr>
-					<tr class="error">
-						<td>
-							2
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							02/04/2012
-						</td>
-						<td>
-							Declined
-						</td>
-					</tr>
-					<tr class="warning">
-						<td>
-							3
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							03/04/2012
-						</td>
-						<td>
-							Pending
-						</td>
-					</tr>
-					<tr class="info">
-						<td>
-							4
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							04/04/2012
-						</td>
-						<td>
-							Call in to confirm
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</div>
+    </div>
+    <div id="">
+      <table class="table table-condensed">
+      <caption></caption>
+      <thead>
+        <tr>
+          <th>Email Address</th>
+          <th>Customer</th>
+          <th>Family</th>
+          <th>EmailGroup</th>
+          <th style="text-align:center">Edit</th>
+        </tr>
+      </thead>
+      <tbody id="">
+          <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+          </tr>
+          <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
+    <div id="indexFooter">
+      <div style="text-align:center;">
+    <ul class="pagination pagination-lg" style="margin:0 auto;">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+    </div>
+  </div>
 </body>
 </html>

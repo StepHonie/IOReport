@@ -5,10 +5,9 @@ let sqlstatement=JSON.parse(fs.readFileSync("./controllers/sqlstatements.json"))
 
 post.handler = function(req, res, next)
 {
-	let json = req.body;
-		if(json.sqlType =='sp')
+		if(req.body.sqlType =='sp')
 		{
-			sql.exec(json.sqlName,json.params,function(err,result)
+			sql.exec(req.body.sqlName,req.body.params,function(err,result)
 			{
 				if(err!=null)
 				{
@@ -18,8 +17,8 @@ post.handler = function(req, res, next)
 				}
 			});
 		}else{
-			let sqlstr = sqlstatement[json.sqlName].sql;
-			sql.queryWithParams(sqlstr,json.params,function(err,result)
+			let sqlstr = sqlstatement[req.body.sqlName].sql;
+			sql.queryWithParams(sqlstr,req.body.params,function(err,result)
 			{
 				if(err!=null)
 				{
@@ -29,19 +28,6 @@ post.handler = function(req, res, next)
 				}
 			});
 		};
-}
-
-post.addAreaStation = function(req,res,next)
-{
-	let sqlstr = sqlstatement[req.body.sqlName].sql;
-	sql.queryWithParams(sqlstr,req.body.params,function(err,result)
-	{
-		if(err!=null){
-			res.send(err);
-		}else{
-			res.send(result);
-		}
-	});
 }
 
 module.exports = post;
